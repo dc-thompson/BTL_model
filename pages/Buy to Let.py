@@ -22,7 +22,7 @@ def load_lottie(source):
         with open(source, 'r') as f:
             return json.load(f)
 
-lottie_house = load_lottie("/Users/dan/Documents/Coding/BTL_model/Streamlit/1725915498155.json")
+lottie_house = load_lottie("1725915498155.json")
 
 # Setup page
 st.set_page_config(
