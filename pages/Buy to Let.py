@@ -90,7 +90,6 @@ with st.sidebar:
     with tabs[0]:
         houseprice = st.number_input('House price (£)', value=100000, step=10000)
         deposit = st.number_input('Deposit (£)', value=10000, step=1000)
-        postcode = st.text_input('Postcode')
     
     with tabs[1]:
         rent = st.number_input('Expected rental income (PCM) (£)')
