@@ -16,7 +16,7 @@ def load_lottie(source):
             return json.load(f)
 
 # Load a relevant Lottie animation
-lottie_house = load_lottie("/Users/dan/Documents/Coding/BTL_model/Streamlit/1725915498155.json")
+lottie_house = load_lottie("1725915498155.json")
 
 # Set page config
 st.set_page_config(page_title="Buy-to-Let Property Model", page_icon="🏠", layout="wide")
