@@ -301,18 +301,6 @@ st.info(f"""
 - This includes a deposit of {capital_requirements.loc[0, 'Amount']} and stamp duty of {capital_requirements.loc[1, 'Amount']}
 """)
 
-# Save functionality
-if st.button("Save Calculations"):
-    calculations = {'deposit': deposit, 'houseprice': houseprice}
-    json_object = json.dumps(calculations, indent=4)
-    st.download_button(
-        label="Download JSON",
-        data=json_object,
-        file_name='calculations.json',
-        mime='application/json'
-    )
-    st.write(calculations)
-
 
 
 
