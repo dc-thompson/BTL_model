@@ -69,7 +69,7 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.title('🏠 Buy to Let Model')
     st.markdown("""
-    Welcome to our advanced Buy-to-Let property financial modelling tool. 
+    Welcome to our Buy-to-Let property financial modelling tool. 
     This app is designed to help you make informed decisions about property investments, 
     whether you're considering purchasing as an individual or through a limited company.
     """)
