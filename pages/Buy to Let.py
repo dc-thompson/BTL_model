@@ -22,7 +22,7 @@ def load_lottie(source):
         with open(source, 'r') as f:
             return json.load(f)
 
-lottie_house = load_lottie("/Users/dan/Documents/Coding/BTL_model/Streamlit/1725915498155.json")
+lottie_house = load_lottie("1725915498155.json")
 
 # Setup page
 st.set_page_config(
@@ -90,7 +90,6 @@ with st.sidebar:
     with tabs[0]:
         houseprice = st.number_input('House price (£)', value=100000, step=10000)
         deposit = st.number_input('Deposit (£)', value=10000, step=1000)
-        postcode = st.text_input('Postcode')
     
     with tabs[1]:
         rent = st.number_input('Expected rental income (PCM) (£)')
@@ -300,18 +299,6 @@ st.info(f"""
 - Total capital required: {capital_requirements.loc[2, 'Amount']}
 - This includes a deposit of {capital_requirements.loc[0, 'Amount']} and stamp duty of {capital_requirements.loc[1, 'Amount']}
 """)
-
-# Save functionality
-if st.button("Save Calculations"):
-    calculations = {'deposit': deposit, 'houseprice': houseprice}
-    json_object = json.dumps(calculations, indent=4)
-    st.download_button(
-        label="Download JSON",
-        data=json_object,
-        file_name='calculations.json',
-        mime='application/json'
-    )
-    st.write(calculations)
 
 
 

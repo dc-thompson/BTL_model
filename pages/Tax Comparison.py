@@ -69,7 +69,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Load the Lottie animation
-lottie_house = load_lottie("/Users/dan/Documents/Coding/BTL_model/Streamlit/1725915498155.json")
+lottie_house = load_lottie("1725915498155.json")
 
 # Main content
 col1, col2 = st.columns([2, 1])
