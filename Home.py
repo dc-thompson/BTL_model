@@ -21,7 +21,6 @@ lottie_house = load_lottie("/Users/dan/Documents/Coding/BTL_model/Streamlit/1725
 # Set page config
 st.set_page_config(page_title="Buy-to-Let Property Model", page_icon="🏠", layout="wide")
 
-# Custom CSS
 st.markdown("""
 <style>
     .main {
@@ -47,13 +46,57 @@ st.markdown("""
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
-    /* New CSS for sidebar */
+    /* CSS for sidebar */
     [data-testid="stSidebar"] {
         min-height: 100vh;
     }
     [data-testid="stSidebar"] > div:first-child {
         height: 100vh;
         overflow-y: auto;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .stApp {
+            max-width: 100%;
+            padding: 10px;
+        }
+        h1 {
+            font-size: 1.8rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+        .stAlert {
+            padding: 15px;
+        }
+        .stTabs {
+            padding: 15px;
+        }
+        [data-testid="stSidebar"] {
+            min-height: auto;
+        }
+        [data-testid="stSidebar"] > div:first-child {
+            height: auto;
+        }
+        /* Improve input readability on mobile */
+        .stTextInput > div > div > input {
+            font-size: 16px;
+        }
+        .stSelectbox > div > div > select {
+            font-size: 16px;
+        }
+        .stNumberInput > div > div > input {
+            font-size: 16px;
+        }
+    }
+
+    /* Ensure text is visible on all backgrounds */
+    .stMarkdown, .stText {
+        color: #2c3e50 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -64,7 +107,7 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.title("🏠 Buy-to-Let Property Financial Modelling")
     st.markdown("""
-    Welcome to our advanced Buy-to-Let property financial modelling app! 
+    Welcome to our Buy-to-Let property financial modelling app! 
     
     This tool is designed to assist you in making informed decisions about property investments, 
     whether you're considering purchasing as an individual or through a limited company.
